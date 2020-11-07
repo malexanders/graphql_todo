@@ -1,5 +1,35 @@
-# Queries
-## fetchTasks
+# Setup
+
+This guide assumes you already have docker and docker-compose installed on your system.
+
+## **Clone repo:**
+
+```jsx
+# Clone repo
+git clone https://github.com/malexanders/graphql_todo.git
+
+# cd into project dir
+cd graphql_todo
+```
+
+## Run app
+
+```bash
+docker-compose up
+```
+
+## Setup DB
+
+```
+docker-compose run web rails db:create db:migrate
+```
+
+# GraphQL
+Navigate to `localhost:3000/graphiql` in any browser and play with the queries and mutations defined below. 
+
+
+## Queries
+### fetchTasks
 ```
 query {
   fetchTasks {
@@ -13,8 +43,8 @@ query {
 }
 ```
 
-# Mutations
-## createTask
+## Mutations
+### taskCreate
 ```
 mutation {
   taskCreate(input: { params: { description: "Finish opsleveltake home assignment in 90 mins ", priority: 1  }}) {
@@ -26,7 +56,7 @@ mutation {
   }
 }
 ```
-## deleteTask
+### taskDelete
 ```
 mutation {
   taskDelete(input: { id: 5}) {
