@@ -1,24 +1,40 @@
-# README
+# Queries
+## fetchTasks
+```
+query {
+  fetchTasks {
+    tasks {
+      id
+      description
+      priority
+    }
+    missingPriorities
+  }
+}
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Mutations
+## createTask
+```
+mutation {
+  taskCreate(input: { params: { description: "Finish opsleveltake home assignment in 90 mins ", priority: 1  }}) {
+    task {
+      id
+      description
+      priority
+    }
+  }
+}
+```
+## deleteTask
+```
+mutation {
+  taskDelete(input: { id: 5}) {
+    task {
+      id
+      description
+      priority
+    }
+  }
+}
+```
