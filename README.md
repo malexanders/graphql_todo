@@ -1,8 +1,6 @@
 # Setup
 
-This guide assumes you already have docker and docker-compose installed on your system.
-
-## **Clone repo:**
+## **Clone repo**
 
 ```jsx
 # Clone repo
@@ -60,11 +58,7 @@ mutation {
 ```
 mutation {
   taskDelete(input: { id: 5}) {
-    task {
-      id
-      description
-      priority
-    }
+    success
   }
 }
 ```
