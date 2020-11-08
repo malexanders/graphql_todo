@@ -1,3 +1,19 @@
+# Quick review files list
+Here is the list of files that contain the majority of the solution for this assignment:
+- app/graphql/queries/fetch_tasks.rb
+- app/graphql/mutations/task_create.rb
+- app/graphql/mutations/task_delete.rb
+- app/graphql/types/query_type.rb
+- app/graphql/types/mutation_type.rb
+- app/graphql/types/input/task_input_type.rb
+- app/graphql/types/task_type.rb
+- app/graphql/types/tasks_type.rb
+- app/models/task.rb
+- db/migrate/20201107161434_create_tasks.rb
+- config/database.yml
+- db/schema.rb
+- Gemfile
+
 # Setup
 
 ## **Clone repo**
